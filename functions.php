@@ -11,7 +11,7 @@
         // Create cunstructor this must have 2 underscores (__)construct
         function __construct()
         {
-            $this->memberExpiration = new DateTime('01/01/2022');
+            $this->memberExpiration = new DateTime('12/12/2022');
         }
 
         // Create methods
@@ -32,11 +32,11 @@
             // days have passed since expiration and provide a form to renew.
             if($this->memberExpiration > $now)
             {
-                echo ("Your card expires in " . $interval . " days. On " . $this->memberExpiration->format('m/Y') . ".");
+                echo ("Your card expires in " . $interval . " days. On " . $this->memberExpiration->format('M d, Y') . ".");
             }
             else
             {
-                echo ("Your card expired " . $interval . " days ago. On " . $this->memberExpiration->format('m/Y') . ".");
+                echo ("Your card expired " . $interval . " days ago. On " . $this->memberExpiration->format('M d, Y') . ".");
                 echo ("<p style='display: flex; justify-content: center;'>" . "Please resubmit below to renew membership.");
                 echo ("</p>");
             }
