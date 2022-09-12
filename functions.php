@@ -32,11 +32,11 @@
             // days have passed since expiration and provide a form to renew.
             if($this->memberExpiration > $now)
             {
-                echo ("Your card expires in " . $interval . " days. On " . $this->memberExpiration->format('M d, Y') . ".");
+                echo ("Your membership expires in " . $interval . " days. On " . $this->memberExpiration->format('M d, Y') . ".");
             }
             else
             {
-                echo ("Your card expired " . $interval . " days ago. On " . $this->memberExpiration->format('M d, Y') . ".");
+                echo ("Your membership expired " . $interval . " days ago. On " . $this->memberExpiration->format('M d, Y') . ".");
                 echo ("<p style='display: flex; justify-content: center;'>" . "Please resubmit below to renew membership.");
                 echo ("</p>");
             }
