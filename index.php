@@ -25,12 +25,6 @@
     <div class="container-fluid">
         <div class="main">
             <h1 style="display: flex; justify-content: center;">Welcome to Delfino Community Club</h1>
-            <p style="display: flex; justify-content: center; margin-top:45px;">
-                If currently a member please use our Member Login.
-            </p>
-            <p style="display: flex; justify-content: center;">
-                If you are not, please feel free to Sign-up and enjoy all of our amazing benefits!
-            </p>
         </div>
     </div>
 </body>

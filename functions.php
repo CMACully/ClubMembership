@@ -5,15 +5,13 @@
     class Member
     {
         // Create variables
-        private $memberName;
-        private $memberExpiration;
-        public $currentMember = true;
+        public $memberName;
+        public $memberExpiration;
 
         // Create cunstructor this must have 2 underscores (__)construct
-        function __construct($memberName, $memberExpiration)
+        function __construct()
         {
-            $this->memberName = $memberName;
-            $this->memberExpiration = $memberExpiration;
+            $this->memberExpiration = new DateTime('01/01/2022');
         }
 
         // Create methods
@@ -26,23 +24,21 @@
         {
             // Get the difference between hardcoded date(memberExpiration) 
             // and today's date(now) converting/formatting it to days.
-            $memberExpiration = date_create("2022-09-01");
             $now = new DateTime();
-            $interval = date_diff($memberExpiration, $now)->format('%a');  
+            $interval = date_diff($this->memberExpiration, $now)->format('%a');  
         
             // Use if else statement to check if now's is < memberExpiration 
             // to show how many days are left of membership or show how many 
             // days have passed since expiration and provide a form to renew.
-            if($now < $memberExpiration)
+            if($this->memberExpiration > $now)
             {
-                echo ("Your card expires in " . $interval . " days.");
+                echo ("Your card expires in " . $interval . " days. On " . $this->memberExpiration->format('m/Y') . ".");
             }
             else
             {
-                echo ("Your card expired " . $interval . " days ago!");
+                echo ("Your card expired " . $interval . " days ago. On " . $this->memberExpiration->format('m/Y') . ".");
                 echo ("<p style='display: flex; justify-content: center;'>" . "Please resubmit below to renew membership.");
                 echo ("</p>");
-                include "expired.php"; // include the expired page if .... expired
             }
         }
     }   

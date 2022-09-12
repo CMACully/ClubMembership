@@ -2,9 +2,6 @@
      This page will be used specifically when the memberLogin link has been clicked on
      It will display the Hardcoded Member $name from the memberLogin.php as well 
      what situation is set for the Expiration by calling the functions from functions.php -->
-<?php
-    include "navigation.php";
-?>
 
 <body class="background">
     <div class="container-fluid">
@@ -14,9 +11,9 @@
                 You have successfully logged in.
             </p>
             <p style="display: flex; justify-content: center;">
-                Welcome back <?php echo $name->get_memberName(); ?>!</p>
+                Welcome back <?php echo $member->get_memberName(); ?>!</p>
             <p style="display: flex; justify-content: center;">
-                <?php echo $expiration->get_memberExpiration(); ?></p>
+                <?php echo $member->get_memberExpiration(); ?></p>
         </div>
     </div>
 </body>

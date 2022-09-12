@@ -17,8 +17,7 @@
     <div class="container-fluid">
         <div class=" sidenav bg-dark">
             <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-            <a class="nav-link" href="memberLogin.php">Member Login</a>
-            <a class="nav-link" href="signup.php">Sign-up</a>
+            <a class="nav-link" href="member.php">Member</a>
         </div>
     </div>
 </body>

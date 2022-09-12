@@ -5,8 +5,8 @@
 <?php
     include "functions.php";
     include "navigation.php";
-    $name = new Member("Mario", "");
-    $expiration = new Member("", "");
+    $member = new Member();
+    $member->memberName = "Mario";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +20,7 @@
 
 <body>
     <?php
-        if ($name->currentMember)
+        if ($member->memberExpiration > new DateTime())
         {
             include "welcome.php";
         }
